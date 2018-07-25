@@ -1,0 +1,973 @@
+{% load static %}
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>結果画面</title>
+		<link rel='stylesheet' type="text/css" href="{% static 'CSS/result.css' %}">
+	</head>
+	<body style="margin: 0px;">
+		<div class="outer">
+			<div class='logo'>
+				<a class='tex' href="http://lb-frontend-60133569.westus2.cloudapp.azure.com/" style="text-decoration:none; color:black;">Hikaku.com</a>
+				<div class='search'>
+					<div class="box">
+						<form method="post" action="result">
+							{% csrf_token %}
+							{{ form.q }}
+					</div>
+					<div class="btn">
+						<input type="submit" value="Go!">
+					</div>
+						</form>
+				</div>
+			</div>
+			<div class='table'>
+				<div class='announce'>
+					<a>{{ keyw }}の検索結果</a>
+				</div>
+				<div class='num_column'>
+					<div class='num_top'></div>
+						<div class='num'><a>1</a></div>
+						<div class='num'><a>2</a></div>
+						<div class='num'><a>3</a></div>
+						<div class='num'><a>4</a></div>
+						<div class='num'><a>5</a></div>
+						<div class='num'><a>6</a></div>
+						<div class='num'><a>7</a></div>
+						<div class='num'><a>8</a></div>
+						<div class='num'><a>9</a></div>
+						<div class='num'><a>10</a></div>
+						<div class='num'><a>11</a></div>
+						<div class='num'><a>12</a></div>
+						<div class='num'><a>13</a></div>
+						<div class='num'><a>14</a></div>
+						<div class='num'><a>15</a></div>
+						<div class='num'><a>16</a></div>
+						<div class='num'><a>17</a></div>
+						<div class='num'><a>18</a></div>
+						<div class='num'><a>19</a></div>
+						<div class='num'><a>20</a></div>
+				</div>
+				<div class='rakuten'>
+					<div class='top'>
+						<a>楽天</a>
+					</div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url0r}}><img src={{ image0r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url0r}}>{{ name0r }}</a>
+                            </div>
+                            <a class='price'>{{ price0r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review0r }}</a>
+                                <a>（{{ review_count0r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url1r}}><img src={{ image1r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url1r}}>{{ name1r }}</a>
+                            </div>
+                            <a class='price'>{{ price1r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review1r }}</a>
+                                <a>（{{ review_count1r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url2r}}><img src={{ image2r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url2r}}>{{ name2r }}</a>
+                            </div>
+                            <a class='price'>{{ price2r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review2r }}</a>
+                                <a>（{{ review_count2r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url3r}}><img src={{ image3r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url3r}}>{{ name3r }}</a>
+                            </div>
+                            <a class='price'>{{ price3r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review3r }}</a>
+                                <a>（{{ review_count3r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url4r}}><img src={{ image4r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url4r}}>{{ name4r }}</a>
+                            </div>
+                            <a class='price'>{{ price4r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review4r }}</a>
+                                <a>（{{ review_count4r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url5r}}><img src={{ image5r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url5r}}>{{ name5r }}</a>
+                            </div>
+                            <a class='price'>{{ price5r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review5r }}</a>
+                                <a>（{{ review_count5r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url6r}}><img src={{ image6r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url6r}}>{{ name6r }}</a>
+                            </div>
+                            <a class='price'>{{ price6r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review6r }}</a>
+                                <a>（{{ review_count6r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url7r}}><img src={{ image7r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url7r}}>{{ name7r }}</a>
+                            </div>
+                            <a class='price'>{{ price7r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review7r }}</a>
+                                <a>（{{ review_count7r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url8r}}><img src={{ image8r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url8r}}>{{ name8r }}</a>
+                            </div>
+                            <a class='price'>{{ price8r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review8r }}</a>
+                                <a>（{{ review_count8r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url9r}}><img src={{ image9r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url9r}}>{{ name9r }}</a>
+                            </div>
+                            <a class='price'>{{ price9r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review9r }}</a>
+                                <a>（{{ review_count9r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url10r}}><img src={{ image10r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url10r}}>{{ name10r }}</a>
+                            </div>
+                            <a class='price'>{{ price10r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review10r }}</a>
+                                <a>（{{ review_count10r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url11r}}><img src={{ image11r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url11r}}>{{ name11r }}</a>
+                            </div>
+                            <a class='price'>{{ price11r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review11r }}</a>
+                                <a>（{{ review_count11r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url12r}}><img src={{ image12r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url12r}}>{{ name12r }}</a>
+                            </div>
+                            <a class='price'>{{ price12r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review12r }}</a>
+                                <a>（{{ review_count12r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url13r}}><img src={{ image13r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url13r}}>{{ name13r }}</a>
+                            </div>
+                            <a class='price'>{{ price13r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review13r }}</a>
+                                <a>（{{ review_count13r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url14r}}><img src={{ image14r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url14r}}>{{ name14r }}</a>
+                            </div>
+                            <a class='price'>{{ price14r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review14r }}</a>
+                                <a>（{{ review_count14r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url15r}}><img src={{ image15r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url15r}}>{{ name15r }}</a>
+                            </div>
+                            <a class='price'>{{ price15r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review15r }}</a>
+                                <a>（{{ review_count15r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url16r}}><img src={{ image16r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url16r}}>{{ name16r }}</a>
+                            </div>
+                            <a class='price'>{{ price16r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review16r }}</a>
+                                <a>（{{ review_count16r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url17r}}><img src={{ image17r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url17r}}>{{ name17r }}</a>
+                            </div>
+                            <a class='price'>{{ price17r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review17r }}</a>
+                                <a>（{{ review_count17r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url18r}}><img src={{ image18r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url18r}}>{{ name18r }}</a>
+                            </div>
+                            <a class='price'>{{ price18r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review18r }}</a>
+                                <a>（{{ review_count18r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url19r}}><img src={{ image19r }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url19r}}>{{ name19r }}</a>
+                            </div>
+                            <a class='price'>{{ price19r }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review19r }}</a>
+                                <a>（{{ review_count19r }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+				</div>
+				<div class='yahoo'>
+					<div class='top'>
+						<a>Yahoo!</a>
+					</div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url0y}}><img src={{ image0y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url0y}}>{{ name0y }}</a>
+                            </div>
+                            <a class='price'>{{ price0y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review0y }}</a>
+                                <a>（{{ review_count0y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url1y}}><img src={{ image1y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url1y}}>{{ name1y }}</a>
+                            </div>
+                            <a class='price'>{{ price1y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review1y }}</a>
+                                <a>（{{ review_count1y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url2y}}><img src={{ image2y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url2y}}>{{ name2y }}</a>
+                            </div>
+                            <a class='price'>{{ price2y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review2y }}</a>
+                                <a>（{{ review_count2y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url3y}}><img src={{ image3y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url3y}}>{{ name3y }}</a>
+                            </div>
+                            <a class='price'>{{ price3y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review3y }}</a>
+                                <a>（{{ review_count3y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url4y}}><img src={{ image4y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url4y}}>{{ name4y }}</a>
+                            </div>
+                            <a class='price'>{{ price4y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review4y }}</a>
+                                <a>（{{ review_count4y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url5y}}><img src={{ image5y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url5y}}>{{ name5y }}</a>
+                            </div>
+                            <a class='price'>{{ price5y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review5y }}</a>
+                                <a>（{{ review_count5y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url6y}}><img src={{ image6y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url6y}}>{{ name6y }}</a>
+                            </div>
+                            <a class='price'>{{ price6y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review6y }}</a>
+                                <a>（{{ review_count6y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url7y}}><img src={{ image7y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url7y}}>{{ name7y }}</a>
+                            </div>
+                            <a class='price'>{{ price7y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review7y }}</a>
+                                <a>（{{ review_count7y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url8y}}><img src={{ image8y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url8y}}>{{ name8y }}</a>
+                            </div>
+                            <a class='price'>{{ price8y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review8y }}</a>
+                                <a>（{{ review_count8y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url9y}}><img src={{ image9y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url9y}}>{{ name9y }}</a>
+                            </div>
+                            <a class='price'>{{ price9y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review9y }}</a>
+                                <a>（{{ review_count9y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url10y}}><img src={{ image10y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url10y}}>{{ name10y }}</a>
+                            </div>
+                            <a class='price'>{{ price10y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review10y }}</a>
+                                <a>（{{ review_count10y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url11y}}><img src={{ image11y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url11y}}>{{ name11y }}</a>
+                            </div>
+                            <a class='price'>{{ price11y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review11y }}</a>
+                                <a>（{{ review_count11y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url12y}}><img src={{ image12y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url12y}}>{{ name12y }}</a>
+                            </div>
+                            <a class='price'>{{ price12y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review12y }}</a>
+                                <a>（{{ review_count12y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url13y}}><img src={{ image13y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url13y}}>{{ name13y }}</a>
+                            </div>
+                            <a class='price'>{{ price13y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review13y }}</a>
+                                <a>（{{ review_count13y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url14y}}><img src={{ image14y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url14y}}>{{ name14y }}</a>
+                            </div>
+                            <a class='price'>{{ price14y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review14y }}</a>
+                                <a>（{{ review_count14y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url15y}}><img src={{ image15y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url15y}}>{{ name15y }}</a>
+                            </div>
+                            <a class='price'>{{ price15y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review15y }}</a>
+                                <a>（{{ review_count15y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url16y}}><img src={{ image16y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url16y}}>{{ name16y }}</a>
+                            </div>
+                            <a class='price'>{{ price16y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review16y }}</a>
+                                <a>（{{ review_count16y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url17y}}><img src={{ image17y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url17y}}>{{ name17y }}</a>
+                            </div>
+                            <a class='price'>{{ price17y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review17y }}</a>
+                                <a>（{{ review_count17y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url18y}}><img src={{ image18y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url18y}}>{{ name18y }}</a>
+                            </div>
+                            <a class='price'>{{ price18y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review18y }}</a>
+                                <a>（{{ review_count18y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url19y}}><img src={{ image19y }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url19y}}>{{ name19y }}</a>
+                            </div>
+                            <a class='price'>{{ price19y }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review19y }}</a>
+                                <a>（{{ review_count19y }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+
+				</div>
+				<div class='amazon'>
+					<div class='top'>
+						<a>Amazon</a>
+					</div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url0a}}><img src={{ image0a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url0a}}>{{ name0a }}</a>
+                            </div>
+                            <a class='price'>{{ price0a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review0a }}</a>
+                                <a>（{{ review_count0a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url1a}}><img src={{ image1a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url1a}}>{{ name1a }}</a>
+                            </div>
+                            <a class='price'>{{ price1a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review1a }}</a>
+                                <a>（{{ review_count1a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url2a}}><img src={{ image2a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url2a}}>{{ name2a }}</a>
+                            </div>
+                            <a class='price'>{{ price2a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review2a }}</a>
+                                <a>（{{ review_count2a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url3a}}><img src={{ image3a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url3a}}>{{ name3a }}</a>
+                            </div>
+                            <a class='price'>{{ price3a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review3a }}</a>
+                                <a>（{{ review_count3a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url4a}}><img src={{ image4a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url4a}}>{{ name4a }}</a>
+                            </div>
+                            <a class='price'>{{ price4a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review4a }}</a>
+                                <a>（{{ review_count4a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url5a}}><img src={{ image5a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url5a}}>{{ name5a }}</a>
+                            </div>
+                            <a class='price'>{{ price5a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review5a }}</a>
+                                <a>（{{ review_count5a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url6a}}><img src={{ image6a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url6a}}>{{ name6a }}</a>
+                            </div>
+                            <a class='price'>{{ price6a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review6a }}</a>
+                                <a>（{{ review_count6a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url7a}}><img src={{ image7a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url7a}}>{{ name7a }}</a>
+                            </div>
+                            <a class='price'>{{ price7a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review7a }}</a>
+                                <a>（{{ review_count7a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url8a}}><img src={{ image8a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url8a}}>{{ name8a }}</a>
+                            </div>
+                            <a class='price'>{{ price8a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review8a }}</a>
+                                <a>（{{ review_count8a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url9a}}><img src={{ image9a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url9a}}>{{ name9a }}</a>
+                            </div>
+                            <a class='price'>{{ price9a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review9a }}</a>
+                                <a>（{{ review_count9a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url10a}}><img src={{ image10a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url10a}}>{{ name10a }}</a>
+                            </div>
+                            <a class='price'>{{ price10a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review10a }}</a>
+                                <a>（{{ review_count10a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url11a}}><img src={{ image11a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url11a}}>{{ name11a }}</a>
+                            </div>
+                            <a class='price'>{{ price11a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review11a }}</a>
+                                <a>（{{ review_count11a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url12a}}><img src={{ image12a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url12a}}>{{ name12a }}</a>
+                            </div>
+                            <a class='price'>{{ price12a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review12a }}</a>
+                                <a>（{{ review_count12a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url13a}}><img src={{ image13a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url13a}}>{{ name13a }}</a>
+                            </div>
+                            <a class='price'>{{ price13a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review13a }}</a>
+                                <a>（{{ review_count13a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url14a}}><img src={{ image14a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url14a}}>{{ name14a }}</a>
+                            </div>
+                            <a class='price'>{{ price14a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review14a }}</a>
+                                <a>（{{ review_count14a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url15a}}><img src={{ image15a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url15a}}>{{ name15a }}</a>
+                            </div>
+                            <a class='price'>{{ price15a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review15a }}</a>
+                                <a>（{{ review_count15a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url16a}}><img src={{ image16a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url16a}}>{{ name16a }}</a>
+                            </div>
+                            <a class='price'>{{ price16a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review16a }}</a>
+                                <a>（{{ review_count16a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url17a}}><img src={{ image17a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url17a}}>{{ name17a }}</a>
+                            </div>
+                            <a class='price'>{{ price17a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review17a }}</a>
+                                <a>（{{ review_count17a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url18a}}><img src={{ image18a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url18a}}>{{ name18a }}</a>
+                            </div>
+                            <a class='price'>{{ price18a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review18a }}</a>
+                                <a>（{{ review_count18a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='div0'>
+                        <div class='image'>
+                            <a href={{url19a}}><img src={{ image19a }} width=128px height=128px></a>
+                        </div>
+                        <div class='info'>
+                            <div class='name'>
+                                <a href={{url19a}}>{{ name19a }}</a>
+                            </div>
+                            <a class='price'>{{ price19a }}円</a>
+                            <div class='review'>
+                                <a class='rate'>★{{ review19a }}</a>
+                                <a>（{{ review_count19a }}件）</a>
+                            </div>
+                        </div>
+                    </div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

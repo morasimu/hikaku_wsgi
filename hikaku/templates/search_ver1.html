@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel='stylesheet' type="text/css" href="{% static 'CSS/search2.css' %}">
+	</head>
+	<body>
+		<div class="outer">
+			<div class="title">
+				<a></a>
+			</div>
+			<div class="txt">
+				<a>Hikaku.com</a>
+			</div>
+			<form method="post" action="result">
+				<div class="box">
+					{% csrf_token %}
+					{{ form.q }}
+				</div>
+			<button class="button2" type="submit">Go!</button>
+			</form>
+			</div>
+		</div>
+	</body>
+</html>
