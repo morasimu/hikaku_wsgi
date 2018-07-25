@@ -27,9 +27,9 @@ class Yahoo_api():
         image = [item_list[str(hit)]['Image']['Medium'] for hit in range(totalhit)]
         name = [item_list[str(hit)]['Name'] for hit in range(totalhit)]
         urls = [item_list[str(hit)]['Url'] for hit in range(totalhit)]
-        price = ["{:,}".format(int(item_list[str(hit)]['Price']['_value'])) for hit in range(totalhit)]
-        review = ['-' if float(item_list[str(hit)]['Review']['Rate'])==0 else item_list[str(hit)]['Review']['Rate'] for hit in range(totalhit)]
-        review_count = ['-' if int(item_list[str(hit)]['Review']['Count'])==0 else item_list[str(hit)]['Review']['Count'] for hit in range(totalhit)]
+        price = ["{:,}".format(int(item_list[str(hit)]['Price']['_value'])) + '円' for hit in range(totalhit)]
+        review = ['★-' if float(item_list[str(hit)]['Review']['Rate'])==0 else '★'+ str(item_list[str(hit)]['Review']['Rate']) for hit in range(totalhit)]
+        review_count = ['(-件) ' if int(item_list[str(hit)]['Review']['Count'])==0 else '('+str(item_list[str(hit)]['Review']['Count'])+'件) ' for hit in range(totalhit)]
 
         keys = ('image', 'name', 'url', 'price', 'review', 'review_count')
         content = (image, name, urls, price, review, review_count)
@@ -70,9 +70,9 @@ class Rakuten_api():
 
         name = [i['itemName'] for i in item]
         urls = [i['itemUrl'] for i in item]
-        price = ["{:,}".format(int(i['itemPrice'])) for i in item]
-        review = ['-' if float(i['reviewAverage'])==0 else i['reviewAverage'] for i in item]
-        review_count = ['-' if int(i['reviewCount'])==0 else i['reviewCount'] for i in item]
+        price = ["{:,}".format(int(i['itemPrice'])) + '円' for i in item]
+        review = ['★-' if float(i['reviewAverage'])==0 else '★'+str(i['reviewAverage']) for i in item]
+        review_count = ['(-件) ' if int(i['reviewCount'])==0 else '('+str(i['reviewCount'])+'件) ' for i in item]
 
         keys = ('image', 'name', 'url', 'price', 'review', 'review_count')
         content = (image, name, urls, price, review, review_count)
@@ -153,14 +153,15 @@ class Amazon_html():
 
                 if m is not None :
                     rev = re.findall('(\d*[.,]?\d)</span>' , m.group(0))
-                    review.append(rev[0])
+                    review.append('★'+str(rev[0]))
                 else :
-                    review.append('-')
+                    review.append('★-')
 
-                review_count.append('-')
+                review_count.append('(-件) ')
 
 
         # HTMLファイルを閉じる
+        price = [i + '円' for i in price]
         data.close()
 
         keys = ('image', 'name', 'url', 'price', 'review', 'review_count')
